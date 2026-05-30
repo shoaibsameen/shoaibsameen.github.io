@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikah & Valima · Kothwal Mohammed Shoaib & M Nishad Sameen</title>
+
+<!-- ══════════════════════════════════════════════════════
+     OPEN GRAPH META TAGS
+     Platform support: WhatsApp · Facebook · LinkedIn · Twitter/X
+     Hosting: GitHub Pages — https://shoaibprop24-a11y.github.io/shoaib-wedding/
+     ──────────────────────────────────────────────────────
+     SETUP INSTRUCTIONS:
+       1. Upload preview.jpg to the root of your GitHub Pages
+          repository alongside index.html.
+       2. Push to GitHub. WhatsApp/Facebook/LinkedIn will
+          auto-fetch the preview image when the link is shared.
+     ══════════════════════════════════════════════════════ -->
+
+<!-- Primary meta -->
+<meta name="description" content="You are invited to the Nikah &amp; Valima of Kothwal Mohammed Shoaib &amp; M. Nishad Sameen · Sunday, 5th July 2026 · Bengaluru. Hosted by K. Ateequr Rahman &amp; M. Karim."/>
+
+<!-- Open Graph — Facebook · WhatsApp · LinkedIn -->
+<meta property="og:type"        content="website"/>
+<meta property="og:url"         content="https://shoaibprop24-a11y.github.io/shoaib-wedding/"/>
+<meta property="og:site_name"   content="Shoaib &amp; Sameen Wedding"/>
+<meta property="og:title"       content="💍 You're Invited — Shoaib &amp; Sameen"/>
+<meta property="og:description" content="Join us for the Nikah &amp; Valima of Kothwal Mohammed Shoaib &amp; M. Nishad Sameen · Sunday, 5th July 2026 · Bengaluru. Hosted by K. Ateequr Rahman &amp; M. Karim."/>
+<meta property="og:image"       content="https://shoaibprop24-a11y.github.io/shoaib-wedding/preview.jpg"/>
+<meta property="og:image:type"  content="image/jpeg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height"content="630"/>
+<meta property="og:image:alt"   content="Wedding Invitation — Kothwal Mohammed Shoaib &amp; M. Nishad Sameen · 5th July 2026 · Bengaluru"/>
+<meta property="og:locale"      content="en_IN"/>
+
+<!-- Twitter / X Card — also read by some bots -->
+<meta name="twitter:card"        content="summary_large_image"/>
+<meta name="twitter:title"       content="💍 You're Invited — Shoaib &amp; Sameen"/>
+<meta name="twitter:description" content="Nikah &amp; Valima · Sunday, 5th July 2026 · Bengaluru"/>
+<meta name="twitter:image"       content="https://shoaibprop24-a11y.github.io/shoaib-wedding/preview.jpg"/>
+<meta name="twitter:image:alt"   content="Wedding Invitation — Kothwal Mohammed Shoaib &amp; M. Nishad Sameen"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold:#C9A84C; --gold-light:#EDD98A; --gold-dark:#8B6914;
+    --cream:#FAF6EE; --cream-dark:#F0E8D8;
+    --deep:#110C06; --deep2:#1E1408;
+    --green:#243D2C; --green-light:#345C3E;
+    --text:#2C1F0E; --text-soft:#6B4F35;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--deep);font-family:'Lato',sans-serif;color:var(--text);overflow-x:hidden;}
+
+  /* ═══ SEAL SCREEN ═══ */
+  #seal-screen{
+    position:fixed;inset:0;z-index:999;
+    background:radial-gradient(ellipse 130% 130% at 50% 115%,#1A2E20 0%,#0A0603 65%);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:2rem;gap:0;
+    transition:opacity 0.9s ease,visibility 0.9s ease;
+  }
+  #seal-screen.gone{opacity:0;visibility:hidden;pointer-events:none;}
+
+  .seal-top-text{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(0.65rem,2.5vw,0.85rem);
+    color:rgba(237,217,138,0.35);
+    letter-spacing:0.45em;text-transform:uppercase;
+    text-align:center;margin-bottom:2rem;
+    opacity:0;animation:fadeUp 1s ease forwards 0.5s;
+  }
+
+  .seal-wrap{
+    position:relative;cursor:pointer;
+    width:clamp(220px,58vw,290px);
+    height:clamp(220px,58vw,290px);
+    opacity:0;animation:fadeUp 1s ease forwards 0.9s;
+    flex-shrink:0;
+  }
+  .seal-wrap:hover svg.seal-svg{filter:brightness(1.12) drop-shadow(0 0 18px rgba(192,57,43,0.6));}
+  .seal-wrap:active svg.seal-svg{transform:scale(0.97);}
+  svg.seal-svg{
+    width:100%;height:100%;
+    transition:transform 0.3s ease,filter 0.3s ease;
+    filter:drop-shadow(0 6px 20px rgba(0,0,0,0.7));
+  }
+
+  .seal-glow{
+    position:absolute;inset:-18px;border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle,rgba(139,26,26,0.45) 0%,transparent 68%);
+    animation:pulse 2.8s ease-in-out infinite;z-index:-1;
+  }
+
+  /* break halves */
+  .seal-left,.seal-right{
+    position:absolute;top:0;width:50%;height:100%;overflow:hidden;
+    z-index:10;pointer-events:none;
+    transition:transform 0.75s cubic-bezier(0.34,1.2,0.64,1),opacity 0.5s ease 0.25s;
+  }
+  .seal-left{left:0;transform-origin:left center;}
+  .seal-right{right:0;transform-origin:right center;}
+  .seal-left svg,.seal-right svg{width:200%;height:100%;position:absolute;top:0;}
+  .seal-left svg{left:0;} .seal-right svg{right:0;}
+  .seal-wrap.broken .seal-left{transform:rotate(-38deg) translate(-55px,18px);opacity:0;}
+  .seal-wrap.broken .seal-right{transform:rotate(38deg) translate(55px,18px);opacity:0;}
+
+  .seal-bottom-text{
+    margin-top:1.8rem;
+    font-family:'Cinzel',serif;font-size:clamp(0.58rem,2vw,0.72rem);
+    color:rgba(237,217,138,0.42);letter-spacing:0.32em;text-transform:uppercase;
+    opacity:0;animation:fadeUp 1s ease forwards 1.3s;
+  }
+  .tap-hint{
+    margin-top:0.7rem;display:flex;align-items:center;gap:0.4rem;justify-content:center;
+    opacity:0;animation:fadeUp 1s ease forwards 1.6s;
+  }
+  .tap-dot{width:5px;height:5px;background:var(--gold);border-radius:50%;animation:tapPulse 1.6s ease-in-out infinite;}
+  .tap-dot:nth-child(2){animation-delay:0.22s;} .tap-dot:nth-child(3){animation-delay:0.44s;}
+  .tap-label{font-size:0.62rem;letter-spacing:0.22em;color:rgba(237,217,138,0.42);text-transform:uppercase;margin:0 0.5rem;}
+
+  /* ═══ INVITATION ═══ */
+  #invitation{opacity:0;visibility:hidden;transition:opacity 1s ease 0.4s;}
+  #invitation.revealed{opacity:1;visibility:visible;}
+
+  /* TABS */
+  .tabs{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;background:rgba(17,12,6,0.97);
+    backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);
+  }
+  .tab{
+    flex:1;padding:0.75rem 0;border:none;background:transparent;
+    color:rgba(237,217,138,0.38);font-family:'Cinzel',serif;
+    font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;
+    cursor:pointer;transition:all 0.3s;border-bottom:2px solid transparent;
+  }
+  .tab.on{color:var(--gold-light);border-bottom-color:var(--gold);}
+  .page{display:none;padding-top:44px;}
+  .page.on{display:block;}
+
+  /* helpers */
+  .gline{width:100px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:0 auto;}
+  .gline-sm{width:60px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:0 auto;}
+  .orn{display:flex;align-items:center;gap:0.8rem;max-width:200px;margin:0 auto;}
+  .ol{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold-dark));}
+  .ol.r{background:linear-gradient(to left,transparent,var(--gold-dark));}
+  .od{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;}
+
+  /* ═══ HERO ═══ */
+  .hero{
+    background:var(--deep);min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:3rem 1.8rem 5rem;position:relative;overflow:hidden;text-align:center;
+  }
+  .hero::before{
+    content:'';position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 100% 55% at 50% -5%,rgba(201,168,76,0.2) 0%,transparent 60%),
+      radial-gradient(ellipse 55% 55% at 10% 92%,rgba(36,61,44,0.5) 0%,transparent 60%),
+      radial-gradient(ellipse 55% 55% at 90% 92%,rgba(36,61,44,0.3) 0%,transparent 60%);
+  }
+  .hero-frame{position:absolute;inset:18px;border:1px solid rgba(201,168,76,0.17);pointer-events:none;}
+  .hero-frame::before{content:'';position:absolute;inset:7px;border:1px solid rgba(201,168,76,0.07);}
+  .cd{position:absolute;width:10px;height:10px;background:var(--gold);transform:rotate(45deg);opacity:0.5;}
+  .cd.tl{top:-5px;left:-5px;}.cd.tr{top:-5px;right:-5px;}.cd.bl{bottom:-5px;left:-5px;}.cd.br{bottom:-5px;right:-5px;}
+
+  .hero-inner{position:relative;z-index:1;opacity:0;animation:fadeUp 1.2s ease forwards 0.3s;width:100%;max-width:560px;}
+
+  .bismillah-ar{
+    font-family:'Noto Nastaliq Urdu',serif;
+    font-size:clamp(1.4rem,5.5vw,2.4rem);color:var(--gold-light);line-height:1.7;margin-bottom:0.3rem;
+  }
+  .bismillah-en{font-size:0.6rem;letter-spacing:0.24em;color:rgba(237,217,138,0.36);text-transform:uppercase;margin-bottom:1.8rem;}
+
+  .h-tag{font-size:0.6rem;letter-spacing:0.3em;color:rgba(237,217,138,0.38);text-transform:uppercase;margin:1.2rem 0 0.8rem;}
+
+  .h-names{margin:0.5rem 0 1rem;}
+  .h-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.8rem,7vw,3.8rem);
+    color:var(--gold-light);font-weight:300;line-height:1.1;
+    letter-spacing:0.01em;
+  }
+  .h-amp{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,5vw,2.4rem);color:var(--gold);font-style:italic;display:block;margin:0.2rem 0;}
+
+  .parents-row{display:flex;justify-content:center;align-items:center;gap:0.5rem 1.5rem;flex-wrap:wrap;margin:0.6rem 0 1.3rem;}
+  .par{text-align:center;}
+  .par-lbl{font-size:0.55rem;letter-spacing:0.25em;color:rgba(237,217,138,0.3);text-transform:uppercase;margin-bottom:0.2rem;}
+  .par-name{font-family:'Cormorant Garamond',serif;font-size:0.92rem;color:rgba(237,217,138,0.65);font-style:italic;}
+  .par-sep{color:var(--gold);opacity:0.3;font-size:1.1rem;}
+
+  .date-badge{
+    display:inline-flex;align-items:center;gap:0.6rem;
+    border:1px solid rgba(201,168,76,0.3);padding:0.5rem 1.5rem;border-radius:50px;
+  }
+  .date-badge span{font-family:'Cinzel',serif;font-size:0.68rem;color:var(--gold);letter-spacing:0.14em;}
+  .ddot{width:4px;height:4px;background:var(--gold);border-radius:50%;opacity:0.4;}
+  .scroll-hint{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(237,217,138,0.25);animation:bounce 2.5s infinite;}
+  .scroll-hint svg{width:22px;height:22px;}
+
+  /* ═══ INVITE BAND ═══ */
+  .iband{background:var(--green);padding:3rem 1.8rem;text-align:center;position:relative;overflow:hidden;}
+  .iband::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,168,76,0.08),transparent 70%);}
+  .iband-inner{position:relative;z-index:1;}
+  .itag{font-size:0.58rem;letter-spacing:0.35em;color:rgba(237,217,138,0.4);text-transform:uppercase;margin-bottom:0.8rem;}
+  .iband h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,5.5vw,2.2rem);color:var(--gold-light);font-weight:300;margin:0.7rem 0 1rem;}
+  .iband p{font-size:0.84rem;line-height:2;color:rgba(237,217,138,0.5);font-weight:300;max-width:400px;margin:0 auto;}
+  .host-block{margin-top:1.5rem;padding-top:1.3rem;border-top:1px solid rgba(201,168,76,0.14);}
+  .host-lbl{font-size:0.58rem;letter-spacing:0.3em;color:rgba(237,217,138,0.26);text-transform:uppercase;margin-bottom:0.7rem;}
+  .host-grid{display:flex;justify-content:center;align-items:center;gap:0.5rem 1.4rem;flex-wrap:wrap;}
+  .host-item{text-align:center;}
+  .host-rel{font-size:0.56rem;letter-spacing:0.2em;color:rgba(237,217,138,0.28);text-transform:uppercase;margin-bottom:0.2rem;}
+  .host-name{font-family:'Cormorant Garamond',serif;font-size:1.12rem;color:var(--gold);font-style:italic;}
+  .host-sep{color:var(--gold);opacity:0.28;font-size:1.5rem;font-family:'Cormorant Garamond',serif;}
+
+  /* ═══ CEREMONIES ═══ */
+  .cer-sec{padding:2.8rem 1.2rem;background:var(--cream);}
+  .sec-head{text-align:center;margin-bottom:1.8rem;opacity:0;transform:translateY(20px);transition:all 0.7s;}
+  .sec-head.vis{opacity:1;transform:translateY(0);}
+  .sec-head .tag{font-size:0.58rem;letter-spacing:0.38em;color:var(--green-light);text-transform:uppercase;margin-bottom:0.5rem;}
+  .sec-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,5.5vw,2.3rem);font-weight:400;color:var(--deep);}
+
+  .ccard{
+    background:#fff;border-radius:18px;overflow:hidden;
+    margin:0 auto 1.2rem;max-width:520px;
+    box-shadow:0 5px 35px rgba(0,0,0,0.08);
+    opacity:0;transform:translateY(22px);transition:all 0.72s;
+  }
+  .ccard.vis{opacity:1;transform:translateY(0);}
+  .ccard-hd{
+    padding:1.3rem 1.6rem;
+    display:flex;align-items:center;justify-content:space-between;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+  }
+  .nk{background:linear-gradient(135deg,#1E1408 0%,#2C1A0A 100%);}
+  .vl{background:linear-gradient(135deg,#182819 0%,#243D2C 100%);}
+  .ccard-num{font-size:0.53rem;letter-spacing:0.28em;color:rgba(237,217,138,0.35);text-transform:uppercase;margin-bottom:0.25rem;}
+  .ccard-title{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold-light);font-weight:400;line-height:1;}
+  .ccard-ico{width:40px;height:40px;border:1px solid rgba(201,168,76,0.22);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0.55;flex-shrink:0;}
+  .ccard-ico svg{width:20px;height:20px;}
+  .ccard-body{padding:1.3rem 1.6rem;}
+  .drow{display:flex;gap:0.9rem;margin-bottom:0.95rem;align-items:flex-start;}
+  .drow:last-child{margin-bottom:0;}
+  .dico{width:32px;height:32px;flex-shrink:0;background:var(--cream-dark);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+  .dico svg{width:15px;height:15px;}
+  .dtxt{flex:1;min-width:0;}
+  .dlbl{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.18rem;}
+  .dval{font-size:0.85rem;color:var(--text);line-height:1.5;}
+  .vname{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--deep);font-weight:600;display:block;}
+  .vaddr{font-size:0.76rem;color:var(--text-soft);line-height:1.55;margin-top:0.1rem;}
+
+  /* ═══ QURAN ═══ */
+  .quran-sec{background:var(--deep2);padding:3.8rem 1.8rem;text-align:center;position:relative;overflow:hidden;}
+  .quran-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 65% at 50% 50%,rgba(36,61,44,0.55),transparent 70%);}
+  .geo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:250px;height:250px;opacity:0.05;pointer-events:none;}
+  .qinner{position:relative;z-index:1;}
+  .q-ar{font-family:'Noto Nastaliq Urdu',serif;font-size:clamp(1.2rem,4.5vw,1.9rem);color:var(--gold-light);line-height:2;margin-bottom:1.1rem;direction:rtl;}
+  .q-tr{font-size:0.8rem;color:rgba(237,217,138,0.48);line-height:2;font-style:italic;max-width:340px;margin:0 auto;}
+  .q-ref{margin-top:1rem;font-size:0.58rem;letter-spacing:0.28em;color:rgba(237,217,138,0.2);text-transform:uppercase;}
+
+  /* ═══ DUA ═══ */
+  .dua-sec{padding:3.2rem 1.8rem;text-align:center;background:var(--cream);opacity:0;transform:translateY(18px);transition:all 0.8s;}
+  .dua-sec.vis{opacity:1;transform:translateY(0);}
+  .dua-sec .tag{font-size:0.58rem;letter-spacing:0.32em;color:var(--text-soft);text-transform:uppercase;margin-bottom:1rem;}
+  .dua-sec p{font-size:0.86rem;line-height:2;color:var(--text-soft);font-style:italic;max-width:340px;margin:0 auto;}
+
+  /* ═══ FOOTER ═══ */
+  .footer{background:var(--deep);padding:2.5rem 1.5rem;text-align:center;}
+  .f-names{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,4vw,1.4rem);color:var(--gold-light);font-style:italic;margin-bottom:0.4rem;line-height:1.3;}
+  .f-date{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.28em;color:var(--gold);opacity:0.45;margin-bottom:1.3rem;}
+  .f-ar{font-family:'Noto Nastaliq Urdu',serif;font-size:1rem;color:rgba(237,217,138,0.35);direction:rtl;line-height:1.8;}
+  .f-tr{font-size:0.6rem;color:rgba(237,217,138,0.18);letter-spacing:0.1em;margin-top:0.4rem;}
+
+  /* ═══ URDU PAGE ═══ */
+  .urdu-pg{min-height:100vh;background:var(--deep);display:flex;align-items:center;justify-content:center;padding:2rem 1.5rem 3rem;position:relative;overflow:hidden;}
+  .urdu-pg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(201,168,76,0.14) 0%,transparent 60%),radial-gradient(ellipse 50% 55% at 5% 95%,rgba(36,61,44,0.5) 0%,transparent 60%),radial-gradient(ellipse 50% 55% at 95% 95%,rgba(36,61,44,0.35) 0%,transparent 60%);}
+  .uborder{position:absolute;inset:20px;border:1px solid rgba(201,168,76,0.13);pointer-events:none;}
+  .uborder::before{content:'';position:absolute;inset:8px;border:1px solid rgba(201,168,76,0.06);}
+  .ucontent{position:relative;z-index:1;text-align:center;direction:rtl;width:100%;max-width:480px;opacity:0;animation:fadeUp 1.2s ease forwards 0.3s;}
+  .u-bis{font-family:'Noto Nastaliq Urdu',serif;font-size:clamp(1.5rem,6.5vw,2.5rem);color:var(--gold-light);line-height:1.8;margin-bottom:0.3rem;}
+  .u-bis-sub{font-family:'Noto Nastaliq Urdu',serif;font-size:0.8rem;color:rgba(237,217,138,0.33);margin-bottom:1.6rem;line-height:1.8;}
+  .u-divider{width:120px;height:1px;background:linear-gradient(to left,transparent,var(--gold),transparent);margin:0 auto 1.6rem;}
+  .u-divider2{width:70px;height:1px;background:linear-gradient(to left,transparent,rgba(201,168,76,0.45),transparent);margin:0.7rem auto 0.9rem;}
+  .u-intro{font-family:'Noto Nastaliq Urdu',serif;font-size:0.85rem;color:rgba(237,217,138,0.4);line-height:2;margin-bottom:0.2rem;}
+  .u-host{font-family:'Noto Nastaliq Urdu',serif;font-size:clamp(0.95rem,3.8vw,1.4rem);color:var(--gold);line-height:1.8;}
+  .u-and{font-family:'Noto Nastaliq Urdu',serif;font-size:0.85rem;color:rgba(237,217,138,0.35);margin:0.15rem 0;}
+  .u-present{font-family:'Noto Nastaliq Urdu',serif;font-size:0.82rem;color:rgba(237,217,138,0.35);margin-top:0.3rem;line-height:2;}
+  .u-name-lbl{font-family:'Noto Nastaliq Urdu',serif;font-size:0.75rem;color:rgba(237,217,138,0.3);margin-bottom:0.4rem;}
+  .u-groom{font-family:'Noto Nastaliq Urdu',serif;font-size:clamp(1.6rem,7vw,3rem);color:var(--gold-light);font-weight:700;line-height:1.4;}
+  .u-amp{font-family:'Noto Nastaliq Urdu',serif;font-size:clamp(1rem,4vw,1.5rem);color:var(--gold);display:block;margin:0.2rem 0;}
+  .u-bride{font-family:'Noto Nastaliq Urdu',serif;font-size:clamp(1.6rem,7vw,3rem);color:var(--gold-light);font-weight:700;line-height:1.4;}
+  .u-prow{display:flex;justify-content:center;gap:0.8rem 1.8rem;flex-wrap:wrap;margin:1rem 0;}
+  .u-par{text-align:center;}
+  .u-plbl{font-family:'Noto Nastaliq Urdu',serif;font-size:0.6rem;color:rgba(237,217,138,0.26);margin-bottom:0.2rem;direction:rtl;}
+  .u-pname{font-family:'Noto Nastaliq Urdu',serif;font-size:0.9rem;color:rgba(237,217,138,0.58);}
+  .u-psep{color:rgba(201,168,76,0.28);font-size:1.3rem;align-self:center;}
+  .u-cblock{margin-bottom:0.9rem;padding:1.1rem 1.4rem;border:1px solid rgba(201,168,76,0.18);border-radius:12px;background:rgba(201,168,76,0.04);}
+  .u-ctitle{font-family:'Noto Nastaliq Urdu',serif;font-size:clamp(1rem,3.8vw,1.4rem);color:var(--gold);margin-bottom:0.4rem;line-height:1.8;}
+  .u-ctext{font-family:'Noto Nastaliq Urdu',serif;font-size:0.8rem;color:rgba(237,217,138,0.45);line-height:2.2;}
+  .u-date{display:inline-flex;align-items:center;gap:0.7rem;border:1px solid rgba(201,168,76,0.25);padding:0.45rem 1.4rem;border-radius:50px;margin-top:1.1rem;}
+  .u-date span{font-family:'Noto Nastaliq Urdu',serif;font-size:0.82rem;color:var(--gold);direction:rtl;}
+
+  /* ═══ KEYFRAMES ═══ */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:0.45}50%{transform:scale(1.1);opacity:0.75}}
+  @keyframes tapPulse{0%,100%{transform:scale(1);opacity:0.35}50%{transform:scale(1.5);opacity:1}}
+
+  /* ── MAPS BUTTON ── */
+  .maps-btn {
+    display:inline-flex; align-items:center; gap:0.5rem;
+    margin-top:0.75rem;
+    padding:0.45rem 1.1rem;
+    border-radius:50px;
+    border:1px solid rgba(201,168,76,0.45);
+    background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.04));
+    color:var(--gold-dark);
+    font-family:'Cinzel',serif;
+    font-size:0.6rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:all 0.25s ease;
+    cursor:pointer;
+  }
+  .maps-btn:hover {
+    background:linear-gradient(135deg,rgba(201,168,76,0.28),rgba(201,168,76,0.1));
+    border-color:var(--gold);
+    color:var(--gold-dark);
+    transform:translateY(-1px);
+    box-shadow:0 4px 14px rgba(201,168,76,0.2);
+  }
+  .maps-btn svg { width:13px; height:13px; flex-shrink:0; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ WAX SEAL SCREEN ══════════════════ -->
+<div id="seal-screen">
+  <div class="seal-top-text">A Wedding Invitation<br>Awaits You</div>
+
+  <div class="seal-wrap" id="sealWrap" onclick="breakSeal()">
+    <div class="seal-glow"></div>
+
+    <!--
+      WAX SEAL — 400×400 viewBox, everything centred on cx=200, cy=200.
+      Design inspired by real brass wax seal stamps:
+        • Perfectly circular deep-red wax disc
+        • 3 concentric gold rings (outer border, text ring, inner field)
+        • 16 ornate petal notches around outer ring
+        • Curved text "NIKAH & VALIMA" along top arc, date along bottom arc
+        • Perfectly formed crescent + 5-point star in the centre field
+        • Names below crescent, clean spacing
+    -->
+    <svg class="seal-svg" id="mainSeal" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Wax gradient: bright top-left, dark bottom-right -->
+        <radialGradient id="wG" cx="36%" cy="30%" r="70%">
+          <stop offset="0%"   stop-color="#D4352A"/>
+          <stop offset="40%"  stop-color="#A01E14"/>
+          <stop offset="100%" stop-color="#5C0A0A"/>
+        </radialGradient>
+        <!-- Subtle top-left shine -->
+        <radialGradient id="wS" cx="30%" cy="25%" r="50%">
+          <stop offset="0%"   stop-color="rgba(255,200,185,0.28)"/>
+          <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+        </radialGradient>
+        <!-- Gold gradient for all engravings -->
+        <linearGradient id="gG" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#F5E070"/>
+          <stop offset="50%"  stop-color="#C9A84C"/>
+          <stop offset="100%" stop-color="#8B6914"/>
+        </linearGradient>
+        <!-- Drop shadow for the disc -->
+        <filter id="ds" x="-25%" y="-25%" width="150%" height="150%">
+          <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#000" flood-opacity="0.7"/>
+        </filter>
+        <!-- Engraved inset look: inner glow -->
+        <filter id="inset">
+          <feOffset dx="0" dy="1"/>
+          <feGaussianBlur stdDeviation="1.5" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+        <!-- Arc paths for curved text -->
+        <!-- Top arc: radius 148, centre 200,200, text sits INSIDE near top -->
+        <path id="topArc"    d="M 62,200 A 138,138 0 0,1 338,200" fill="none"/>
+        <!-- Bottom arc: radius 138, text along bottom -->
+        <path id="bottomArc" d="M 72,210 A 130,130 0 0,0 328,210" fill="none"/>
+      </defs>
+
+      <!-- ══ 1. WAX DISC ══ -->
+      <circle cx="200" cy="200" r="182" fill="url(#wG)" filter="url(#ds)"/>
+      <!-- Shine overlay -->
+      <circle cx="200" cy="200" r="182" fill="url(#wS)"/>
+
+      <!-- ══ 2. OUTERMOST ORNATE BORDER: 24 petal notches ══ -->
+      <!-- We draw 24 small arcs / petal shapes evenly around r=168 -->
+      <g fill="url(#gG)" opacity="0.75">
+        <!-- Generated: 24 petals at 15° intervals, each a small ellipse rotated to radial angle -->
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(0   200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(15  200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(30  200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(45  200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(60  200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(75  200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(90  200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(105 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(120 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(135 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(150 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(165 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(180 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(195 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(210 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(225 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(240 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(255 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(270 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(285 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(300 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(315 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(330 200 200)"/>
+        <ellipse cx="200" cy="33"  rx="5" ry="9" transform="rotate(345 200 200)"/>
+      </g>
+
+      <!-- ══ 3. THREE CONCENTRIC GOLD RINGS ══ -->
+      <circle cx="200" cy="200" r="168" fill="none" stroke="url(#gG)" stroke-width="2.5"  opacity="0.85"/>
+      <circle cx="200" cy="200" r="158" fill="none" stroke="url(#gG)" stroke-width="0.8"  opacity="0.45"/>
+      <!-- Inner field ring -->
+      <circle cx="200" cy="200" r="112" fill="rgba(0,0,0,0.22)" stroke="url(#gG)" stroke-width="2"   opacity="0.85"/>
+      <circle cx="200" cy="200" r="105" fill="none"              stroke="url(#gG)" stroke-width="0.8" opacity="0.4"/>
+
+      <!-- ══ 4. DIAMOND DOTS between outer rings at 8 points ══ -->
+      <g fill="url(#gG)" opacity="0.8">
+        <polygon points="200,29  204,36  200,43  196,36"  /><!-- top     -->
+        <polygon points="200,371 204,364 200,357 196,364" /><!-- bottom  -->
+        <polygon points="29,200  36,204  43,200  36,196"  /><!-- left    -->
+        <polygon points="371,200 364,204 357,200 364,196" /><!-- right   -->
+        <polygon points="118,62  123,68  118,74  113,68"  /><!-- TL      -->
+        <polygon points="282,62  287,68  282,74  277,68"  /><!-- TR      -->
+        <polygon points="118,338 123,332 118,326 113,332" /><!-- BL      -->
+        <polygon points="282,338 287,332 282,326 277,332" /><!-- BR      -->
+      </g>
+
+      <!-- ══ 5. CURVED TEXT — top arc: بِسْمِ اللّٰهِ ══ -->
+      <text font-family="'Noto Nastaliq Urdu',serif" font-size="17" fill="url(#gG)" opacity="0.92">
+        <textPath href="#topArc" startOffset="50%" text-anchor="middle">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</textPath>
+      </text>
+
+      <!-- ══ 6. CURVED TEXT — bottom arc: date ══ -->
+      <text font-family="'Cinzel',serif" font-size="13" fill="url(#gG)" opacity="0.65" letter-spacing="2">
+        <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">5  ·  JULY  ·  2026</textPath>
+      </text>
+
+      <!-- ══ 7. CRESCENT & STAR — centred in inner field ══ -->
+      <!--
+        Crescent technique: draw filled outer circle, then overlay
+        an offset inner circle in wax colour to carve out the crescent shape.
+        Outer circle r=38 at cx=192,cy=178
+        Inner (cutout) r=32 offset +14px right, -8px up → cx=206,cy=170
+      -->
+      <circle cx="192" cy="178" r="38" fill="url(#gG)" opacity="0.92"/>
+      <circle cx="207" cy="171" r="32" fill="#8A1210"/>
+
+      <!-- 5-point star to the right of crescent -->
+      <!-- Centre: cx=240, cy=164, radius=16 -->
+      <g transform="translate(240,163)">
+        <!-- 5 pointed star: outer r=16, inner r=7 -->
+        <polygon
+          points="
+            0,-16
+            4.7,-6.5
+            15.2,-4.9
+            7.6,2.9
+            9.4,13.5
+            0,8.4
+            -9.4,13.5
+            -7.6,2.9
+            -15.2,-4.9
+            -4.7,-6.5
+          "
+          fill="url(#gG)" opacity="0.92"/>
+      </g>
+
+      <!-- ══ 8. HORIZONTAL RULE below crescent ══ -->
+      <line x1="118" y1="222" x2="282" y2="222" stroke="url(#gG)" stroke-width="1" opacity="0.5"/>
+      <!-- small centre diamond on rule -->
+      <polygon points="200,218 204,222 200,226 196,222" fill="url(#gG)" opacity="0.65"/>
+
+      <!-- ══ 9. GROOM NAME ══ -->
+      <text x="200" y="241" text-anchor="middle"
+            font-family="'Cormorant Garamond',serif" font-size="13.5"
+            fill="url(#gG)" font-style="italic" opacity="0.95"
+            letter-spacing="0.3">Kothwal Mohammed Shoaib</text>
+
+      <!-- ══ 10. AMPERSAND ══ -->
+      <text x="200" y="258" text-anchor="middle"
+            font-family="'Cormorant Garamond',serif" font-size="11"
+            fill="url(#gG)" font-style="italic" opacity="0.55">— &amp; —</text>
+
+      <!-- ══ 11. BRIDE NAME ══ -->
+      <text x="200" y="275" text-anchor="middle"
+            font-family="'Cormorant Garamond',serif" font-size="13.5"
+            fill="url(#gG)" font-style="italic" opacity="0.95"
+            letter-spacing="0.3">M. Nishad Sameen</text>
+
+      <!-- ══ 12. CRACK LINES (shown on tap) ══ -->
+      <g id="cracks" style="opacity:0;transition:opacity 0.12s;">
+        <line x1="200" y1="18"  x2="210" y2="195" stroke="rgba(255,230,200,0.8)"  stroke-width="2"/>
+        <line x1="200" y1="18"  x2="188" y2="188" stroke="rgba(255,230,200,0.5)"  stroke-width="1.2"/>
+        <line x1="90"  y1="65"  x2="205" y2="198" stroke="rgba(255,230,200,0.38)" stroke-width="1"/>
+        <line x1="310" y1="65"  x2="196" y2="198" stroke="rgba(255,230,200,0.38)" stroke-width="1"/>
+        <line x1="200" y1="382" x2="194" y2="205" stroke="rgba(255,230,200,0.28)" stroke-width="0.9"/>
+      </g>
+    </svg>
+
+    <!-- Tap ripple -->
+    <div id="ripple" style="position:absolute;top:50%;left:50%;width:100%;height:100%;border-radius:50%;border:2px solid rgba(201,168,76,0.55);transform:translate(-50%,-50%) scale(0.8);opacity:0;pointer-events:none;transition:transform 0.6s ease,opacity 0.6s ease;"></div>
+  </div>
+
+  <div class="seal-bottom-text">Nikah &amp; Valima · 5 July 2026</div>
+  <div class="tap-hint">
+    <div class="tap-dot"></div><div class="tap-dot"></div><div class="tap-dot"></div>
+    <span class="tap-label">Tap the seal to open</span>
+    <div class="tap-dot"></div><div class="tap-dot"></div><div class="tap-dot"></div>
+  </div>
+</div>
+
+<!-- ══════════════════ INVITATION ══════════════════ -->
+<div id="invitation">
+
+  <nav class="tabs">
+    <button class="tab on" onclick="sw('en',this)">English Invitation</button>
+    <button class="tab" onclick="sw('ur',this)">اردو دعوت نامہ</button>
+  </nav>
+
+  <!-- ── ENGLISH ── -->
+  <div id="pg-en" class="page on">
+
+    <section class="hero">
+      <div class="hero-frame">
+        <div class="cd tl"></div><div class="cd tr"></div>
+        <div class="cd bl"></div><div class="cd br"></div>
+      </div>
+      <div class="hero-inner">
+        <div class="bismillah-ar">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+        <div class="bismillah-en">In the name of Allah, the Most Gracious, the Most Merciful</div>
+        <div class="gline" style="margin-bottom:1.5rem;"></div>
+        <div class="h-tag">With the blessings of Allah, we joyfully invite you to the Nikah &amp; Valima of</div>
+        <div class="h-names">
+          <div class="h-name">Kothwal Mohammed Shoaib</div>
+          <span class="h-amp">&amp;</span>
+          <div class="h-name">M. Nishad Sameen</div>
+        </div>
+        <div class="parents-row">
+          <div class="par">
+            <div class="par-lbl">Son of</div>
+            <div class="par-name">K. Ateequr Rahman</div>
+          </div>
+          <div class="par-sep">·</div>
+          <div class="par">
+            <div class="par-lbl">Daughter of</div>
+            <div class="par-name">M. Karim</div>
+          </div>
+        </div>
+        <div class="date-badge">
+          <span>Sunday</span><div class="ddot"></div>
+          <span>5th July 2026</span><div class="ddot"></div>
+          <span>Bengaluru</span>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="iband">
+      <div class="iband-inner">
+        <div class="itag">A Blessed Occasion</div>
+        <div class="gline" style="margin-bottom:0.9rem;"></div>
+        <h2>You Are Warmly Invited</h2>
+        <p>We humbly request the honour of your presence and duas as we celebrate the sacred union of our beloved children.</p>
+        <div class="host-block">
+          <div class="host-lbl">Hosted By</div>
+          <div class="host-grid">
+            <div class="host-item">
+              <div class="host-rel">Groom's Father</div>
+              <div class="host-name">K. Ateequr Rahman</div>
+            </div>
+            <div class="host-sep">&amp;</div>
+            <div class="host-item">
+              <div class="host-rel">Bride's Father</div>
+              <div class="host-name">M. Karim</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cer-sec">
+      <div class="sec-head" id="sh">
+        <div class="tag">Mark Your Calendar</div>
+        <h2>The Celebrations</h2>
+        <div class="orn" style="margin-top:0.8rem;">
+          <div class="ol"></div><div class="od"></div><div class="ol r"></div>
+        </div>
+      </div>
+
+      <!-- NIKAH -->
+      <div class="ccard" id="c1">
+        <div class="ccard-hd nk">
+          <div>
+            <div class="ccard-num">Ceremony One</div>
+            <div class="ccard-title">Nikah</div>
+          </div>
+          <div class="ccard-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#EDD98A" stroke-width="1.2">
+              <path d="M12 2L9 9H2l5.5 4-2 7L12 16l6.5 4-2-7L22 9h-7z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="ccard-body">
+          <div class="drow">
+            <div class="dico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <path d="M16 2v4M8 2v4M3 10h18"/>
+              </svg>
+            </div>
+            <div class="dtxt">
+              <div class="dlbl">Date &amp; Time</div>
+              <div class="dval">Sunday, 5th July 2026 &nbsp;·&nbsp; 12:15 PM</div>
+            </div>
+          </div>
+          <div class="drow">
+            <div class="dico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="1.8">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+            </div>
+            <div class="dtxt">
+              <div class="dlbl">Venue</div>
+              <div class="dval">
+                <span class="vname">Masjid-E-Khadria</span>
+                <span class="vaddr">Plot No. 68, Millers Rd, Cantonment Railway Quarters,<br>Benson Town, Bengaluru – 560046</span>
+                <a class="maps-btn" href="https://maps.app.goo.gl/sdSTKvedzjjbQtRt6" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                    <circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none"/>
+                  </svg>
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VALIMA -->
+      <div class="ccard" id="c2" style="margin-bottom:0;">
+        <div class="ccard-hd vl">
+          <div>
+            <div class="ccard-num">Ceremony Two</div>
+            <div class="ccard-title">Valima</div>
+          </div>
+          <div class="ccard-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#EDD98A" stroke-width="1.2">
+              <path d="M3 11l19-9-9 19-2-8-8-2z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="ccard-body">
+          <div class="drow">
+            <div class="dico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2D4A35" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <path d="M16 2v4M8 2v4M3 10h18"/>
+              </svg>
+            </div>
+            <div class="dtxt">
+              <div class="dlbl">Date &amp; Time</div>
+              <div class="dval">Sunday, 5th July 2026<br>Lunch &nbsp;·&nbsp; After Zohar Namaz</div>
+            </div>
+          </div>
+          <div class="drow">
+            <div class="dico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2D4A35" stroke-width="1.8">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+            </div>
+            <div class="dtxt">
+              <div class="dlbl">Venue</div>
+              <div class="dval">
+                <span class="vname">Shams Convention Centre</span>
+                <span class="vaddr">67, Haines Rd, Sulthangunta, Shivaji Nagar,<br>Bengaluru – 560001</span>
+                <a class="maps-btn" href="https://maps.app.goo.gl/pAoPQNRB61AJ4Pdi8" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                    <circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none"/>
+                  </svg>
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quran-sec">
+      <svg class="geo" viewBox="0 0 200 200">
+        <polygon points="100,10 190,55 190,145 100,190 10,145 10,55" fill="none" stroke="#C9A84C" stroke-width="1"/>
+        <polygon points="100,28 172,67 172,133 100,172 28,133 28,67" fill="none" stroke="#C9A84C" stroke-width="0.5"/>
+        <circle cx="100" cy="100" r="42" fill="none" stroke="#C9A84C" stroke-width="0.5"/>
+      </svg>
+      <div class="qinner">
+        <div class="q-ar">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا<br>
+          لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+        </div>
+        <div class="gline-sm" style="margin-bottom:1rem;"></div>
+        <div class="q-tr">"And among His signs is that He created for you from yourselves mates, that you may find tranquillity in them; and He placed between you affection and mercy."</div>
+        <div class="q-ref">Surah Ar-Rum · 30:21</div>
+      </div>
+    </section>
+
+    <section class="dua-sec" id="dua">
+      <div class="tag">A Humble Request</div>
+      <div class="orn" style="margin:0.8rem auto 1.2rem;">
+        <div class="ol"></div><div class="od"></div><div class="ol r"></div>
+      </div>
+      <p>Your presence, prayers, and blessings mean the world to us.<br><br>Please remember the couple in your duas on this most blessed occasion.</p>
+    </section>
+
+    <footer class="footer">
+      <div class="f-names">Kothwal Mohammed Shoaib &amp; M. Nishad Sameen</div>
+      <div class="f-date">5 · 7 · 2026 · Bengaluru</div>
+      <div class="gline" style="margin-bottom:1.3rem;"></div>
+      <div class="f-ar">بَارَكَ اللهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
+      <div class="f-tr">May Allah bless you both and bring you together in goodness</div>
+    </footer>
+
+  </div><!-- end pg-en -->
+
+  <!-- ── URDU PAGE ── -->
+  <div id="pg-ur" class="page">
+    <div class="urdu-pg">
+      <div class="uborder"></div>
+      <div class="ucontent">
+        <div class="u-bis">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+        <div class="u-bis-sub">اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے</div>
+        <div class="u-divider"></div>
+        <div class="u-intro">جناب</div>
+        <div class="u-host">کے اعتیق الرحمٰن</div>
+        <div class="u-and">اور</div>
+        <div class="u-host">ایم کریم</div>
+        <div class="u-present">کی جانب سے بخوشی دعوت دی جاتی ہے</div>
+        <div class="u-divider2"></div>
+        <div class="u-name-lbl">اپنے عزیزوں کی شادی کی خوشی میں</div>
+        <div class="u-groom">کوٹھوال محمد شعیب</div>
+        <span class="u-amp">اور</span>
+        <div class="u-bride">ایم نشاد سمین</div>
+        <div class="u-prow">
+          <div class="u-par">
+            <div class="u-plbl">صاحبزادے</div>
+            <div class="u-pname">کے اعتیق الرحمٰن</div>
+          </div>
+          <div class="u-psep">·</div>
+          <div class="u-par">
+            <div class="u-plbl">صاحبزادی</div>
+            <div class="u-pname">ایم کریم</div>
+          </div>
+        </div>
+        <div class="u-divider2"></div>
+        <div class="u-cblock">
+          <div class="u-ctitle">نکاح</div>
+          <div class="u-ctext">
+            اتوار، ۵ جولائی ۲۰۲۶ &nbsp;·&nbsp; دوپہر ۱۲:۱۵ بجے<br>
+            مسجد خضریہ، پلاٹ نمبر ۶۸، ملر روڈ<br>
+            بنسن ٹاؤن، بنگلور – ۵۶۰۰۴۶
+          </div>
+        </div>
+        <div class="u-cblock">
+          <div class="u-ctitle" style="color:#7DC48A;">ولیمہ</div>
+          <div class="u-ctext">
+            اتوار، ۵ جولائی ۲۰۲۶ &nbsp;·&nbsp; ظہر کے بعد<br>
+            شمس کنونشن سینٹر<br>
+            ہینس روڈ، شیواجی نگر، بنگلور – ۵۶۰۰۰۱
+          </div>
+        </div>
+        <div class="u-date">
+          <span>اتوار &nbsp;·&nbsp; ۵ جولائی ۲۰۲۶ &nbsp;·&nbsp; بنگلور</span>
+        </div>
+      </div>
+    </div>
+  </div><!-- end pg-ur -->
+
+</div><!-- end #invitation -->
+
+<script>
+  function breakSeal() {
+    const wrap = document.getElementById('sealWrap');
+    const cracks = document.getElementById('cracks');
+    const ripple = document.getElementById('ripple');
+    const screen = document.getElementById('seal-screen');
+    const inv = document.getElementById('invitation');
+
+    // Show cracks
+    cracks.style.opacity = '1';
+
+    // Ripple
+    ripple.style.transform = 'translate(-50%,-50%) scale(2.8)';
+    ripple.style.opacity = '0.8';
+    setTimeout(() => { ripple.style.opacity = '0'; }, 120);
+
+    // Break
+    setTimeout(() => { wrap.classList.add('broken'); }, 200);
+
+    // Hide seal, show invitation
+    setTimeout(() => {
+      screen.classList.add('gone');
+      document.body.style.overflow = 'auto';
+    }, 750);
+    setTimeout(() => { inv.classList.add('revealed'); }, 820);
+  }
+
+  function sw(id, btn) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('on'));
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
+    document.getElementById('pg-' + id).classList.add('on');
+    btn.classList.add('on');
+    window.scrollTo(0, 0);
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.ccard,.sec-head,.dua-sec').forEach(el => obs.observe(el));
+  document.getElementById('c2').style.transitionDelay = '0.18s';
+
+  document.body.style.overflow = 'hidden';
+</script>
+</body>
+</html>
